@@ -1,0 +1,36 @@
+.error {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.info {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #4185a9;
+    background-color: #d6e6f2;
+    border-color: #a8d0eb;
+}
+
+#login-box{
+    width: 300px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border: 1px solid #000;
+}
+
+body{
+    background-image: url("../image/login_background.jpg");
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+}

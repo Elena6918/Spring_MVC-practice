@@ -1,0 +1,7 @@
+#composition_btn{
+    /*background-image: url("../image/composition-btn.png");*/
+    background: lightblue;
+    border: solid 0px #000000;
+    potition: fixed;
+    bottom: 10%;
+}
