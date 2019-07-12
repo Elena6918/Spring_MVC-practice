@@ -11,6 +11,7 @@
 <head>
     <title>Login Page</title>
 </head>
+<link href="${pageContext.request.contextPath}/resources/css/login.css" rel="stylesheet">
 <body>
 <div id="login-box">
     <c:if test="${not empty error}">
@@ -31,26 +32,6 @@
         <input type="submit" value="register"/>
     </form>
 </div>
+
 </body>
 </html>
-<style>
-    .error {
-        padding: 15px;
-        margin-bottom: 20px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        color: #a94442;
-        background-color: #f2dede;
-        border-color: #ebccd1;
-    }
-
-    #login-box {
-        width: 300px;
-        padding: 20px;
-        margin: 100px auto;
-        background: #fff;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border: 1px solid #000;
-    }
-</style>

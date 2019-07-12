@@ -4,6 +4,8 @@ import com.skill.domain.User;
 import com.skill.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -41,10 +43,7 @@ public class LoginController {
         }
     }
 
-    @RequestMapping("/upload")
-    public void upload(@RequestParam("picture") MultipartFile picture) throws Exception {
-        System.out.println(picture.getOriginalFilename());
-    }
+
 
     @RequestMapping(value = "/register")
     public String register() {
@@ -63,7 +62,7 @@ public class LoginController {
             return new ModelAndView("register", "error", "Password cannot be null.");
         }
 
-//      验证用户名是否已经注册过
+//      test name repetition
         User user;
         try {
             user = userService.findUserByUserName(username);
@@ -92,4 +91,6 @@ public class LoginController {
         request.getSession().invalidate();
         return "login";
     }
+
+
 }

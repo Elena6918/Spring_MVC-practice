@@ -11,46 +11,27 @@
 <head>
     <title>Login Page</title>
 </head>
+<link href="${pageContext.request.contextPath}/resources/css/login.css" rel="stylesheet">
 <body>
-<div id="login-box">
-    <c:if test="${not empty error}">
-        <div class="error">${error}</div>
-    </c:if>
-    <form action="<c:url value="/loginCheck"/>" method="post">
-        username：
-        <input type="text" name="userName">
-        <br>
-        password：
-        <input type="password" name="password">
-        <br>
-        <input type="submit" value="submit"/>
-        <input type="reset" value="reset"/>
-    </form>
-    <form action="<c:url value="/register"/>" method="post">
-        Not registered user? click here:
-        <input type="submit" value="register"/>
-    </form>
-</div>
+    <div id="login-box">
+        <c:if test="${not empty error}">
+            <div class="error">${error}</div>
+        </c:if>
+        <form action="<c:url value="/loginCheck"/>" method="post">
+            username：
+            <input type="text" name="userName">
+            <br>
+            password：
+            <input type="password" name="password">
+            <br>
+            <input type="submit" value="submit"/>
+            <input type="reset" value="reset"/>
+        </form>
+        <form action="<c:url value="/register"/>" method="post">
+            Not registered user? click here:
+            <input type="submit" value="register"/>
+        </form>
+    </div>
+
 </body>
 </html>
-<style>
-    .error {
-        padding: 15px;
-        margin-bottom: 20px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        color: #a94442;
-        background-color: #f2dede;
-        border-color: #ebccd1;
-    }
-
-    #login-box {
-        width: 300px;
-        padding: 20px;
-        margin: 100px auto;
-        background: #fff;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border: 1px solid #000;
-    }
-</style>
