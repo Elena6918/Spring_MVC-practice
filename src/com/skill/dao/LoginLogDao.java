@@ -16,4 +16,3 @@ public class LoginLogDao {
         jdbcTemplate.update(sqlStr, args);
     }
 }
-

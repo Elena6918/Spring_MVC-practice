@@ -1,25 +1,18 @@
 package com.skill.controller;
 
+import com.skill.domain.LoginCommand;
 import com.skill.domain.User;
 import com.skill.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
-
 import org.apache.commons.lang3.StringUtils;
-
 
 @Controller
 public class LoginController {
-
     @Autowired
     private UserService userService;
 
@@ -42,8 +35,6 @@ public class LoginController {
             return new ModelAndView("main");
         }
     }
-
-
 
     @RequestMapping(value = "/register")
     public String register() {
@@ -91,6 +82,4 @@ public class LoginController {
         request.getSession().invalidate();
         return "login";
     }
-
-
 }

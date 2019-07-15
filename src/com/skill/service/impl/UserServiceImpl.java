@@ -2,8 +2,10 @@ package com.skill.service.impl;
 
 import com.skill.dao.LoginLogDao;
 import com.skill.dao.UserDao;
+import com.skill.dao.UserWorkDao;
 import com.skill.domain.LoginLog;
 import com.skill.domain.User;
+import com.skill.domain.UserWork;
 import com.skill.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,8 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
     @Autowired
     private LoginLogDao loginLogDao;
+    @Autowired
+    private UserWorkDao userWorkDao;
 
     public boolean hasMatchUser(String userName, String password) {
         int matchCount = userDao.getMatchCount(userName, password);
@@ -41,7 +45,11 @@ public class UserServiceImpl implements UserService {
         userDao.insert(user);
     }
 
-    public void delete(long id) {
-        userDao.delete(id);
+    public UserWork findWorkByWorkId(int workId){
+        return userWorkDao.findWorkByWorkId(workId);
+    }
+
+    public void saveUserWork(UserWork userWork){
+        userWorkDao.insert(userWork);
     }
 }

@@ -55,5 +55,3 @@
     <!--    <resources mapping="/js/**" location="/js/" />-->
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 </beans>
-
-

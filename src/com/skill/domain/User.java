@@ -10,8 +10,7 @@ public class User {
     private String lastIp;
     private Date lastVisit;
 
-    public User() {
-    }
+    public User() { }
 
     public int getUserId() {
         return userId;

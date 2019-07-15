@@ -16,13 +16,15 @@
 <c:if test="${not empty info}">
     <div class="info">${info}</div>
 </c:if>
-<div id="input-box">
-    <textarea style="resize: none" id="content-box" rows="5" cols="30" placeholder="write something here..."></textarea>
+<%--<div id="input-box">--%>
     <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="picture">
         <input type="submit" value="upload">
-        <input type="button" id="post-btn" value="submit work"/>
     </form>
-</div>
+    <form action="/save" method="post">
+        <textarea style="resize: none" id="content-box" name="textarea"  placeholder="write something here..."></textarea>
+        <input type="submit" id="post-btn" value="save"/>
+    </form>
+<%--</div>--%>
 </body>
 </html>

@@ -21,19 +21,19 @@
         <c:if test="${not empty info}">
             <div class="info">${info}</div>
         </c:if>
-            username
-            <input type="text" id="userName" name="username">
+        username
+        <input type="text" id="userName" name="username">
         <br>
-            password
-            <input type="password" id="password" name="password">
+        password
+        <input type="password" id="password" name="password">
         <br>
-            <input id="submit" type="submit" value="register">
+        <input id="submit" type="submit" value="register">
         <br>
         <a href="/login">back to login page</a>
 
-<%--            <form action="<c:url value="/login"/>" method="post">--%>
-<%--                <input type="submit" value="back to login"/>--%>
-<%--            </form>--%>
+        <%--            <form action="<c:url value="/login"/>" method="post">--%>
+        <%--                <input type="submit" value="back to login"/>--%>
+        <%--            </form>--%>
     </div>
 </form>
 

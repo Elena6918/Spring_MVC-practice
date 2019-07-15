@@ -1,4 +1,4 @@
-package com.skill.controller;
+package com.skill.domain;
 
 public class LoginCommand {
     private String userName;

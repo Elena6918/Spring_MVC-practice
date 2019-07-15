@@ -14,16 +14,16 @@
 <body>
 <h2>Submitted Files</h2>
 <table>
-<%--    <c:forEach items="${picture}" var="picture">--%>
-        <tr>
-            <td>OriginalFileName:</td>
-            <td>${picture.originalFilename}</td>
-        </tr>
-        <tr>
-            <td>Type:</td>
-            <td>${picture.contentType}</td>
-        </tr>
-<%--    </c:forEach>--%>
+    <%--    <c:forEach items="${picture}" var="picture">--%>
+    <tr>
+        <td>OriginalFileName:</td>
+        <td>${picture.originalFilename}</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td>${picture.contentType}</td>
+    </tr>
+    <%--    </c:forEach>--%>
 </table>
 </body>
 </html>
