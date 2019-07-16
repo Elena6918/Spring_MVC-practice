@@ -42,7 +42,6 @@ public class UserDao {
                 user.getLastIp(), user.getCredits(), user.getUserId()});
     }
 
-
     public void insert(User user) {
         this.jdbcTemplate.update("INSERT INTO Spring_user(user_name,password) VALUES(?,?)",
                 user.getUserName(), user.getPassword());

@@ -13,7 +13,7 @@ public interface UserService {
 
     void insert(User newUser);
 
-    UserWork findWorkByWorkId(int workId);
+    UserWork findWorkByWorkName(String workName);
 
     void saveUserWork(UserWork userWork);
 }

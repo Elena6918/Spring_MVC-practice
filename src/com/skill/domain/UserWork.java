@@ -5,6 +5,7 @@ public class UserWork {
     private int workId;
     private String workContent;
     private Date creationTime;
+    private String workName;
     public UserWork(){};
 
     public int getWorkId(){
@@ -24,5 +25,11 @@ public class UserWork {
     }
     public void setCreationTime(Date creationTime){
         this.creationTime = creationTime;
+    }
+    public String getWorkName(){
+        return workName;
+    }
+    public void setWorkName(String workName){
+        this.workName = workName;
     }
 }

@@ -19,6 +19,11 @@
 <br>
 ${user.userName},welcome to Discussion Board，your current credit is ${user.credits};
 <br>
+<form action="/work" method="get" id="work-blog">
+    <input type="submit" name="workName" value=${sampleView} />
+</form>
+
+<br>
 <form action="<c:url value="/composition"/>" method="post">
     <input type="submit" value="add" id="composition_btn"/>
 </form>

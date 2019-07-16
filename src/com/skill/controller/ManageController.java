@@ -25,14 +25,18 @@ public class ManageController {
     }
 
     @RequestMapping("/save")
-    public ModelAndView save(HttpServletRequest request, String textarea){
-//        String workContent = request.getParameter("textarea");
+    public ModelAndView save(String title, String content){
         UserWork newUserWork = new UserWork();
-        newUserWork.setWorkContent(textarea);
+        newUserWork.setWorkName(title);
+        newUserWork.setWorkContent(content);
         newUserWork.setCreationTime(new Date());
         try{
             userService.saveUserWork(newUserWork);
-            return new ModelAndView("composition", "info", "save successfully!");
+            ModelAndView mav = new ModelAndView();
+            mav.setViewName("main");
+            mav.addObject("info", "save successfully!");
+            mav.addObject("sampleView", newUserWork.getWorkName());
+            return mav;
         }
         catch(Exception e) {
             return new ModelAndView("composition", "error", e.getMessage());
@@ -41,5 +45,14 @@ public class ManageController {
     @RequestMapping("/composition")
     public String composition(){
         return "composition";
+    }
+
+    @RequestMapping("/work")
+    public ModelAndView work(@RequestParam("workName") String workName){
+        UserWork currentWork = userService.findWorkByWorkName(workName);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("work");
+        mav.addObject("wholeView", currentWork.getWorkContent());
+        return mav;
     }
 }
