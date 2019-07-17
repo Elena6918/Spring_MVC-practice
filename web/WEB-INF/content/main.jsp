@@ -15,6 +15,9 @@
     <title>Board</title>
 </head>
 <body>
+<%!
+    String title =
+%>
 <a href="/login">Log out</a>
 <br>
 ${user.userName},welcome to Discussion Board，your current credit is ${user.credits};

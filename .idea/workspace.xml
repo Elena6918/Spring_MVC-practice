@@ -9,28 +9,11 @@
     <list default="true" id="16b0731a-9de9-4cb7-b25e-dc5a309c252f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/controller/ManageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/controller/ManageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/dao/UserWorkDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/dao/UserWorkDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/domain/UserWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/domain/UserWork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/com/skill/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/test/TestUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/classes/test/TestUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/content/composition.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/content/composition.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/content/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/content/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/springMVC/com/skill/controller/ManageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/springMVC/com/skill/controller/ManageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/springMVC/com/skill/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/springMVC/com/skill/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/springMVC/com/skill/dao/UserWorkDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/springMVC/com/skill/dao/UserWorkDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/springMVC/com/skill/domain/UserWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/springMVC/com/skill/domain/UserWork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/springMVC/com/skill/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/springMVC/com/skill/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/springMVC/com/skill/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/springMVC/com/skill/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/springMVC/test/TestUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/springMVC/test/TestUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/skill/controller/ManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/skill/controller/ManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/skill/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/skill/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/skill/dao/UserWorkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/skill/dao/UserWorkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/skill/domain/UserWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/skill/domain/UserWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/skill/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/skill/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/skill/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/skill/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/content/composition.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/content/composition.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/content/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/content/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/resources/css/composition.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/css/composition.css" afterDir="false" />
@@ -64,35 +47,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/skill/controller/ManageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+            <state relative-caret-position="-168">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1869#1870#0" expanded="true" />
+                <element signature="e#1905#1906#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/composition.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="21" column="66" lean-forward="true" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
-              <folding>
-                <element signature="n#style#0;n#textarea#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="585">
+              <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -100,8 +73,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/resources/css/composition.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="360">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/resources/css/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -189,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/com/skill/controller/UploadController.java" />
         <option value="$PROJECT_DIR$/src/com/skill/domain/LoginCommand.java" />
         <option value="$PROJECT_DIR$/src/com/skill/dao/LoginLogDao.java" />
-        <option value="$PROJECT_DIR$/src/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/com/skill/domain/User.java" />
         <option value="$PROJECT_DIR$/src/com/skill/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/com/skill/dao/UserDao.java" />
@@ -199,11 +189,12 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/content/work.jsp" />
         <option value="$PROJECT_DIR$/src/com/skill/dao/UserWorkDao.java" />
         <option value="$PROJECT_DIR$/src/test/TestUserService.java" />
-        <option value="$PROJECT_DIR$/src/com/skill/controller/ManageController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/content/main.jsp" />
         <option value="$PROJECT_DIR$/web/resources/css/work.css" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/content/main.jsp" />
+        <option value="$PROJECT_DIR$/src/applicationContext.xml" />
         <option value="$PROJECT_DIR$/web/resources/css/composition.css" />
         <option value="$PROJECT_DIR$/web/WEB-INF/content/composition.jsp" />
+        <option value="$PROJECT_DIR$/src/com/skill/controller/ManageController.java" />
       </list>
     </option>
   </component>
@@ -231,8 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,31 +232,27 @@
             <path>
               <item name="springMVC" type="b2602c69:ProjectViewProjectNode" />
               <item name="springMVC" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springMVC" type="b2602c69:ProjectViewProjectNode" />
               <item name="springMVC" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="skill" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springMVC" type="b2602c69:ProjectViewProjectNode" />
               <item name="springMVC" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springMVC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springMVC" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="skill" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,8 +265,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -519,11 +507,11 @@
       <item itemvalue="JUnit.TestUserService.hasMatchUser" />
       <item itemvalue="JUnit.TestUserService.testAddLoginLog" />
       <item itemvalue="JUnit.TestUserService (1)" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.42" />
       <item itemvalue="JUnit.TestUserService.testFindWorkByWork" />
       <item itemvalue="JUnit.TestUserService.testFindWorkByWorkId" />
       <item itemvalue="JUnit.TestUserService.testFindWorkByWorkName" />
       <item itemvalue="JUnit.TestUserService.testFindUserByUserName (1)" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.42" />
     </list>
     <recent_temporary>
       <list>
@@ -560,7 +548,8 @@
       <workItem from="1562744623508" duration="22009000" />
       <workItem from="1562893838483" duration="15225000" />
       <workItem from="1563153349969" duration="15109000" />
-      <workItem from="1563238433678" duration="16256000" />
+      <workItem from="1563238433678" duration="16415000" />
+      <workItem from="1563326212737" duration="12081000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1562826875999</created>
@@ -619,7 +608,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124879000" />
+    <option name="totallyTimeSpent" value="137119000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -632,9 +621,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="744" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49915683" visible="true" weight="0.2609047" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49915683" visible="true" weight="0.26494345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -645,16 +633,16 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32892805" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.33282208" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2868098" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36656442" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32892805" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32892805" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49919224" weight="0.2496329" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49919224" weight="0.24846625" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5016155" side_tool="true" weight="0.32599118" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32822084" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32668713" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32892805" />
       <window_info anchor="bottom" id="Database Changes" order="14" weight="0.32892805" />
       <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.4983845" weight="0.32599118" />
@@ -726,19 +714,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/production/springMVC/org/skill/controller/HelloController.class" />
-    <entry file="file://$PROJECT_DIR$/src/org/skill/bean/Student.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/skill/controller/HelloController.java" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b07cfcb6-f915-4a59-9d97-1a051c06e78f/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/spring-beans-4.3.18.RELEASE.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -914,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="55" column="67" lean-forward="true" selection-start-line="55" selection-start-column="67" selection-end-line="55" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/skill/domain/LoginCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -942,20 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/upload.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/skill/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -973,30 +927,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/skill/domain/UserWork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/work.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1047,43 +977,105 @@
     <entry file="file://$PROJECT_DIR$/web/resources/css/work.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/skill/controller/ManageController.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/ThreadLocal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+        <state relative-caret-position="139">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#8486#8487#0" expanded="true" />
+            <element signature="e#8523#8524#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/skill/domain/UserWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/upload.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="176">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/work.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/image/composition-btn.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/image/a8657d733b9247fb85bc5896957371bd.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/image/93e6824494a440b6880af4601e5704b5.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/springMVC_war_exploded/WEB-INF/image/6b1c43064af04ab196993743e4ba2c75.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="27" />
+        <state relative-caret-position="321">
+          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/css/composition.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="360">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/content/composition.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="21" column="66" lean-forward="true" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+        <state relative-caret-position="585">
+          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/skill/controller/ManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
-            <element signature="n#style#0;n#textarea#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1869#1870#0" expanded="true" />
+            <element signature="e#1905#1906#0" expanded="true" />
           </folding>
         </state>
       </provider>

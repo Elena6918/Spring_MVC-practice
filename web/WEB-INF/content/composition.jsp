@@ -7,6 +7,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    request.setAttribute("basePath", basePath);
+%>
 <html>
 <link href="${pageContext.request.contextPath}/resources/css/composition.css" rel="stylesheet">
 <head>
@@ -16,7 +21,7 @@
 <c:if test="${not empty info}">
     <div class="info">${info}</div>
 </c:if>
-
+<div class="row">
     <div class="col left">
         <form action="/save" method="post">
             Title: <input type="text" name="title" id="title-box">
@@ -31,20 +36,16 @@
     </div>
 
     <div class="col right">
-        <h2>Column</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies,
-            eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat,
-            purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
-            tortor sed accumsan convallis.
-            A placeholder image
-            A preview image function here.
-        </p>
+        <h2>Image</h2>
+        Here is the image preview:
+        <div id="image-box">
+            <img src="${basePath}${imagesPath}" id="previewImage"/>
+        </div>
         <form action="/upload" method="post" enctype="multipart/form-data">
             <input type="file" name="picture">
             <input type="submit" value="upload">
         </form>
     </div>
-
+</div>
 </body>
 </html>

@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.io.File;
 import java.util.Date;
+import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
@@ -18,10 +21,20 @@ public class ManageController {
     private UserService userService;
 
     @RequestMapping("/upload")
-    public ModelAndView upload(@RequestParam("picture") MultipartFile picture, ModelMap modelMap) throws Exception {
+    public ModelAndView upload(@RequestParam("picture") MultipartFile picture, ModelMap modelMap, HttpServletRequest request) throws Exception {
         modelMap.addAttribute("picture", picture);
-        System.out.println(picture.getOriginalFilename());
-        return new ModelAndView("composition", "info", "upload successfully!");
+        String pathRoot = request.getSession().getServletContext().getRealPath("");
+        String path="";
+        if(!picture.isEmpty()){
+            String uuid = UUID.randomUUID().toString().replaceAll("-","");
+            String contentType=picture.getContentType();
+            String imageName=contentType.substring(contentType.indexOf("/")+1);
+            path="/resources/image/"+uuid+"."+imageName;
+            picture.transferTo(new File(pathRoot+path));
+            modelMap.addAttribute("imagesPath", path);
+            return new ModelAndView("composition", "info", "upload successfully!");
+        }
+        return new ModelAndView("composition", "info", "no image selected.");
     }
 
     @RequestMapping("/save")
@@ -35,13 +48,15 @@ public class ManageController {
             ModelAndView mav = new ModelAndView();
             mav.setViewName("main");
             mav.addObject("info", "save successfully!");
-            mav.addObject("sampleView", newUserWork.getWorkName());
+            String sampleView = newUserWork.getWorkName();
+            mav.addObject("sampleView", sampleView);
             return mav;
         }
         catch(Exception e) {
             return new ModelAndView("composition", "error", e.getMessage());
         }
     }
+
     @RequestMapping("/composition")
     public String composition(){
         return "composition";

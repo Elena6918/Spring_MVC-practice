@@ -50,8 +50,6 @@
         <property name="prefix" value="/WEB-INF/content/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-    <!--    <mvc: resources mapping="/resources/**" location="/resources/" />-->
-    <!--    <resources mapping="/images/**" location="/images/" />-->
-    <!--    <resources mapping="/js/**" location="/js/" />-->
+
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 </beans>
