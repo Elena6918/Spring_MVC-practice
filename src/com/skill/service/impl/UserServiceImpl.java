@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -51,5 +53,9 @@ public class UserServiceImpl implements UserService {
 
     public void saveUserWork(UserWork userWork){
         userWorkDao.insert(userWork);
+    }
+
+    public List<UserWork> workList(){
+        return userWorkDao.workList();
     }
 }

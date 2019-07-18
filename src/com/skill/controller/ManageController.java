@@ -9,11 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
+
+
 
 @Controller
 public class ManageController {
@@ -45,11 +48,8 @@ public class ManageController {
         newUserWork.setCreationTime(new Date());
         try{
             userService.saveUserWork(newUserWork);
-            ModelAndView mav = new ModelAndView();
-            mav.setViewName("main");
+            ModelAndView mav = new ModelAndView("composition");
             mav.addObject("info", "save successfully!");
-            String sampleView = newUserWork.getWorkName();
-            mav.addObject("sampleView", sampleView);
             return mav;
         }
         catch(Exception e) {
@@ -62,12 +62,21 @@ public class ManageController {
         return "composition";
     }
 
-    @RequestMapping("/work")
-    public ModelAndView work(@RequestParam("workName") String workName){
+    @RequestMapping("/worklist")
+    public ModelAndView workList(){
+        ModelAndView mav = new ModelAndView("worklist");
+        List<UserWork> workList = userService.workList();
+        mav.addObject("workList", workList);
+        return mav;
+    }
+
+        @RequestMapping("/work")
+        public ModelAndView work(@RequestParam("workName") String workName){
+        ModelAndView mav = new ModelAndView("work");
         UserWork currentWork = userService.findWorkByWorkName(workName);
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("work");
-        mav.addObject("wholeView", currentWork.getWorkContent());
+        mav.addObject("workTitle", currentWork.getWorkName());
+        mav.addObject("workContent", currentWork.getWorkContent());
+        mav.addObject("time", currentWork.getCreationTime());
         return mav;
     }
 }

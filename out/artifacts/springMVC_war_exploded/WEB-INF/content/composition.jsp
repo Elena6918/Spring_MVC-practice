@@ -33,6 +33,9 @@
             <br>
             <input type="submit" id="post-btn" value="save"/>
         </form>
+        <form action="/worklist" method="post">
+            <input type="submit" value="View Worklist">
+        </form>
     </div>
 
     <div class="col right">

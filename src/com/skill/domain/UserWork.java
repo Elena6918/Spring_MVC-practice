@@ -1,10 +1,14 @@
 package com.skill.domain;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 public class UserWork {
     private int workId;
     private String workContent;
     private Date creationTime;
+    private String time;
     private String workName;
     public UserWork(){};
 
@@ -26,10 +30,37 @@ public class UserWork {
     public void setCreationTime(Date creationTime){
         this.creationTime = creationTime;
     }
+    public void setCreationTime(String creationTime){
+        this.time = creationTime;
+    }
     public String getWorkName(){
         return workName;
     }
     public void setWorkName(String workName){
         this.workName = workName;
     }
+
+    public static UserWork toObject(Map<String, Object> map) {
+//        Date date = (Date)map.get("create_time");
+//        String a = date.toString().substring(0, 11);
+        UserWork userWork = new UserWork();
+        userWork.setWorkName((String)map.get("work_title"));
+        userWork.setWorkContent((String)map.get("work_content"));
+        userWork.setCreationTime((Date)map.get("create_time"));
+//        userWork.setCreationTime(a);
+        userWork.setWorkId((Integer)map.get("work_id"));
+        return userWork;
+    }
+
+    public static List<UserWork> toObject(List<Map<String, Object>> lists){
+        List<UserWork> userWorks = new ArrayList<UserWork>();
+        for (Map<String, Object> map : lists) {
+            UserWork userWork =  UserWork.toObject(map);
+            if (userWork != null) {
+                userWorks.add(userWork);
+            }
+        }
+        return userWorks;
+    }
+
 }

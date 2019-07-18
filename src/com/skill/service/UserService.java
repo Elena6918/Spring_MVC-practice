@@ -3,6 +3,8 @@ package com.skill.service;
 import com.skill.domain.User;
 import com.skill.domain.UserWork;
 
+import java.util.List;
+
 
 public interface UserService {
     boolean hasMatchUser(String userName, String password);
@@ -16,4 +18,6 @@ public interface UserService {
     UserWork findWorkByWorkName(String workName);
 
     void saveUserWork(UserWork userWork);
+
+    List<UserWork> workList();
 }
