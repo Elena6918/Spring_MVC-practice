@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -32,6 +33,7 @@
                       style="resize: none"></textarea>
             <br>
             <input type="submit" id="post-btn" value="save"/>
+            <input type="hidden" value="${imagesPath}" name="imagePath"/>
         </form>
         <form action="/worklist" method="post">
             <input type="submit" value="View Worklist">
@@ -52,3 +54,9 @@
 </div>
 </body>
 </html>
+
+<script>
+    $("img").on("error", function() {
+        $(this).hide();
+    });
+</script>

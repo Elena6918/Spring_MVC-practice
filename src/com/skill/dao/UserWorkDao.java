@@ -20,8 +20,8 @@ public class UserWorkDao {
     public UserWorkDao() { }
 
     public void insert(UserWork userWork) {
-        this.jdbcTemplate.update("INSERT INTO Spring_userWork (work_title, work_content, create_time) VALUES(?,?,?)",
-                userWork.getWorkName(), userWork.getWorkContent(), userWork.getCreationTime());
+        this.jdbcTemplate.update("INSERT INTO Spring_userWork (work_title, work_content, create_time, image_path) VALUES(?,?,?,?)",
+                userWork.getWorkName(), userWork.getWorkContent(), userWork.getCreationTime(), userWork.getImagePath());
     }
 
     public UserWork findWorkByWorkName(final String workTitle) {

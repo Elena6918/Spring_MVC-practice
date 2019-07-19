@@ -6,6 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    request.setAttribute("basePath", basePath);
+%>
 <html>
 <link href="${pageContext.request.contextPath}/resources/css/work.css" rel="stylesheet">
 <head>
@@ -15,5 +20,6 @@
 <h3>${workTitle}</h3>
 <hr>
 ${workContent}
+<img src="${basePath}${imagesPath}" id="previewImage" alt="missing image"/>
 </body>
 </html>

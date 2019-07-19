@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -24,7 +23,9 @@ public class ManageController {
     private UserService userService;
 
     @RequestMapping("/upload")
-    public ModelAndView upload(@RequestParam("picture") MultipartFile picture, ModelMap modelMap, HttpServletRequest request) throws Exception {
+    public ModelAndView upload(@RequestParam("picture") MultipartFile picture, ModelMap modelMap,
+                               HttpServletRequest request) throws Exception {
+        ModelAndView mav = new ModelAndView("composition");
         modelMap.addAttribute("picture", picture);
         String pathRoot = request.getSession().getServletContext().getRealPath("");
         String path="";
@@ -35,17 +36,20 @@ public class ManageController {
             path="/resources/image/"+uuid+"."+imageName;
             picture.transferTo(new File(pathRoot+path));
             modelMap.addAttribute("imagesPath", path);
-            return new ModelAndView("composition", "info", "upload successfully!");
+            mav.addObject("info", "upload successfully!");
+            return mav;
         }
-        return new ModelAndView("composition", "info", "no image selected.");
+        mav.addObject("info", "no image selected.");
+        return mav;
     }
 
     @RequestMapping("/save")
-    public ModelAndView save(String title, String content){
+    public ModelAndView save(String title, String content, String imagePath){
         UserWork newUserWork = new UserWork();
         newUserWork.setWorkName(title);
         newUserWork.setWorkContent(content);
         newUserWork.setCreationTime(new Date());
+        newUserWork.setImagePath(imagePath);
         try{
             userService.saveUserWork(newUserWork);
             ModelAndView mav = new ModelAndView("composition");
@@ -70,13 +74,15 @@ public class ManageController {
         return mav;
     }
 
-        @RequestMapping("/work")
-        public ModelAndView work(@RequestParam("workName") String workName){
+    @RequestMapping("/work")
+    public ModelAndView work(@RequestParam("workName") String workName) {
         ModelAndView mav = new ModelAndView("work");
         UserWork currentWork = userService.findWorkByWorkName(workName);
         mav.addObject("workTitle", currentWork.getWorkName());
         mav.addObject("workContent", currentWork.getWorkContent());
         mav.addObject("time", currentWork.getCreationTime());
+        mav.addObject("imagesPath", currentWork.getImagePath());
+        System.out.println(currentWork.getImagePath());
         return mav;
     }
 }

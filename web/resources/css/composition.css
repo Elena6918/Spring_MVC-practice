@@ -7,6 +7,7 @@ body{
     margin: 1%;
     height: 450px;
 }
+
 .left {
     float: left;
     width:48%;
@@ -23,6 +24,7 @@ body{
     width: 420px;
     height: 200px;
     padding: 10px;
+    /*background-image: url("../image/login_background.jpg");*/
 }
 
 #previewImage {
@@ -45,5 +47,4 @@ body{
 #title-box{
     border: 1px solid #000;
 }
-
 

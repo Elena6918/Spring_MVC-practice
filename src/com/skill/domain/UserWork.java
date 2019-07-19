@@ -8,9 +8,10 @@ public class UserWork {
     private int workId;
     private String workContent;
     private Date creationTime;
-    private String time;
     private String workName;
-    public UserWork(){};
+    private String imagePath;
+
+    public UserWork(){}
 
     public int getWorkId(){
         return workId;
@@ -30,9 +31,7 @@ public class UserWork {
     public void setCreationTime(Date creationTime){
         this.creationTime = creationTime;
     }
-    public void setCreationTime(String creationTime){
-        this.time = creationTime;
-    }
+
     public String getWorkName(){
         return workName;
     }
@@ -40,14 +39,19 @@ public class UserWork {
         this.workName = workName;
     }
 
+    public String getImagePath(){
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath){
+        this.imagePath = imagePath;
+    }
+
     public static UserWork toObject(Map<String, Object> map) {
-//        Date date = (Date)map.get("create_time");
-//        String a = date.toString().substring(0, 11);
         UserWork userWork = new UserWork();
         userWork.setWorkName((String)map.get("work_title"));
         userWork.setWorkContent((String)map.get("work_content"));
         userWork.setCreationTime((Date)map.get("create_time"));
-//        userWork.setCreationTime(a);
         userWork.setWorkId((Integer)map.get("work_id"));
         return userWork;
     }
@@ -62,5 +66,4 @@ public class UserWork {
         }
         return userWorks;
     }
-
 }
