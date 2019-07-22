@@ -2,6 +2,10 @@ body{
     background: lightblue;
 }
 
+textarea{
+    resize: none;
+}
+
 .col{
     padding: 3%;
     margin: 1%;

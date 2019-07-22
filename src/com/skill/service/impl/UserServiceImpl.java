@@ -47,8 +47,8 @@ public class UserServiceImpl implements UserService {
         userDao.insert(user);
     }
 
-    public UserWork findWorkByWorkName(String workName){
-        return userWorkDao.findWorkByWorkName(workName);
+    public UserWork findWorkById(int workId){
+        return userWorkDao.findWorkByWorkId(workId);
     }
 
     public void saveUserWork(UserWork userWork){

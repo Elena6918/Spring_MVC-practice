@@ -24,18 +24,19 @@ public class UserWorkDao {
                 userWork.getWorkName(), userWork.getWorkContent(), userWork.getCreationTime(), userWork.getImagePath());
     }
 
-    public UserWork findWorkByWorkName(final String workTitle) {
-        String sqlStr = " SELECT work_id, work_content " + " FROM Spring_userWork WHERE work_title =? ";
+    public UserWork findWorkByWorkId(final int workId) {
+        String sqlStr = " SELECT work_title, work_content, create_time, image_path " + " FROM Spring_userWork WHERE work_id =? ";
         final UserWork userWork = new UserWork();
-        jdbcTemplate.query(sqlStr, new Object[]{workTitle},
+        jdbcTemplate.query(sqlStr, new Object[]{workId},
                 rs -> {
-                    userWork.setWorkContent(rs.getString("work_content"));
-                    userWork.setWorkName(workTitle);
-                    userWork.setWorkId(rs.getInt("work_id"));
+                    userWork.setWorkContent(rs.getString("work_content").replace("\r\n","<br>"));
+                    userWork.setWorkName(rs.getString("work_title"));
+                    userWork.setWorkId(workId);
+                    userWork.setCreationTime(rs.getDate("create_time"));
+                    userWork.setImagePath(rs.getString("image_path"));
                 });
         return userWork;
     }
-
     public List<UserWork> workList(){
         String sqlStr="SELECT * FROM Spring_userWork";
         List<Map<String, Object>> workList = jdbcTemplate.queryForList(sqlStr);

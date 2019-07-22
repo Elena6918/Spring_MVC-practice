@@ -45,11 +45,4 @@ public class TestUserService {
         user.setLastVisit(new Date());
         userService.loginSuccess(user);
     }
-
-    @Test
-    public void testFindWorkByWorkName(){
-        UserWork userWork = userService.findWorkByWorkName("my feeling");
-        assertEquals(userWork.getWorkId(), 1);
-        assertEquals(userWork.getWorkContent(),"Hello there~");
-    }
 }

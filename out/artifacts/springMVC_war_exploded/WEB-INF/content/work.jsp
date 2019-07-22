@@ -17,9 +17,15 @@
     <title>Work Display</title>
 </head>
 <body>
-<h3>${workTitle}</h3>
-<hr>
-${workContent}
-<img src="${basePath}${imagesPath}" id="previewImage" alt="missing image"/>
+<div class="row">
+    <div class="col left">
+        <h3>${workTitle}</h3>
+        <hr>
+        ${workContent}
+    </div>
+    <div class="col right">
+        <img src="${basePath}${imagesPath}" id="previewImage" alt="missing image"/>
+    </div>
+</div>
 </body>
 </html>

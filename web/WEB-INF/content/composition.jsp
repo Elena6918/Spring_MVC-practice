@@ -26,11 +26,8 @@
     <div class="col left">
         <form action="/save" method="post">
             Title: <input type="text" name="title" id="title-box">
-
             <hr>
-
-            <textarea rows="30" cols="100" name="content" placeholder="write something here..."
-                      style="resize: none"></textarea>
+            <textarea rows="30" cols="100" name="content" placeholder="write something here..."></textarea>
             <br>
             <input type="submit" id="post-btn" value="save"/>
             <input type="hidden" value="${imagesPath}" name="imagePath"/>

@@ -1,3 +1,21 @@
 body{
     background: lightblue;
 }
+
+.col{
+    padding: 3%;
+    margin: 1%;
+    height: 450px;
+}
+
+.left {
+    float: left;
+    width:48%;
+    background-color: #E8F6F7;
+}
+
+.right {
+    float: right;
+    width:35%;
+    background-color: #f2dede;
+}

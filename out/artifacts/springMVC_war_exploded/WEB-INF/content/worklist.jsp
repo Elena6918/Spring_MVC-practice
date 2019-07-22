@@ -23,7 +23,7 @@ There is the list:
 <div class="grid-container">
     <c:forEach items="${workList}" var="data">
         <div>
-            <a href=${basePath}work?workName=${data.workName}>
+            <a href=${basePath}work?workId=${data.workId}>
                 ${data.workName}
             <br>
                 ${data.creationTime}

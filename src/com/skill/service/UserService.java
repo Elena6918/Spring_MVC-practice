@@ -15,7 +15,7 @@ public interface UserService {
 
     void insert(User newUser);
 
-    UserWork findWorkByWorkName(String workName);
+    UserWork findWorkById(int workId);
 
     void saveUserWork(UserWork userWork);
 

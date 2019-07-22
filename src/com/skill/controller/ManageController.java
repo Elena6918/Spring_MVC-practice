@@ -75,14 +75,13 @@ public class ManageController {
     }
 
     @RequestMapping("/work")
-    public ModelAndView work(@RequestParam("workName") String workName) {
+    public ModelAndView work(@RequestParam("workId") int workId) {
         ModelAndView mav = new ModelAndView("work");
-        UserWork currentWork = userService.findWorkByWorkName(workName);
+        UserWork currentWork = userService.findWorkById(workId);
         mav.addObject("workTitle", currentWork.getWorkName());
         mav.addObject("workContent", currentWork.getWorkContent());
         mav.addObject("time", currentWork.getCreationTime());
         mav.addObject("imagesPath", currentWork.getImagePath());
-        System.out.println(currentWork.getImagePath());
         return mav;
     }
 }
