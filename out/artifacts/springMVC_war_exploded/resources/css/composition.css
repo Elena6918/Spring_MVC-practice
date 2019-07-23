@@ -4,31 +4,32 @@ body{
 
 textarea{
     resize: none;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .col{
-    padding: 3%;
-    margin: 1%;
-    height: 450px;
+    padding: 30px;
+    margin: 10px;
+    height: 540px;
 }
 
 .left {
     float: left;
-    width:48%;
+    width:620px;
     background-color: #E8F6F7;
 }
 
 .right {
     float: right;
-    width:35%;
+    width:420px;
     background-color: #f2dede;
 }
 
 #image-box{
     width: 420px;
-    height: 200px;
+    height: 400px;
     padding: 10px;
-    /*background-image: url("../image/login_background.jpg");*/
 }
 
 #previewImage {

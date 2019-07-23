@@ -15,14 +15,14 @@
     <title>Board</title>
 </head>
 <body>
-<a href="/login">Log out</a>
+<a href="/content/login">Log out</a>
 <br>
 ${user.userName},welcome to Discussion Board，your current credit is ${user.credits};
 <br>
 
 
 <br>
-<form action="<c:url value="/composition"/>" method="post">
+<form action="<c:url value="/private/composition"/>" method="post">
     <input type="submit" value="add" id="composition_btn"/>
 </form>
 </body>

@@ -8,9 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-    request.setAttribute("basePath", basePath);
 %>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <html>
 <link href="${pageContext.request.contextPath}/resources/css/work.css" rel="stylesheet">
 <head>
@@ -24,8 +23,15 @@
         ${workContent}
     </div>
     <div class="col right">
-        <img src="${basePath}${imagesPath}" id="previewImage" alt="missing image"/>
+        <div id="image-box">
+        <img src="<%=path%>${imagesPath}" id="viewImage" alt="missing image"/>
+        </div>
     </div>
 </div>
 </body>
 </html>
+<script>
+    $("img").on("error", function() {
+        $(this).hide();
+    });
+</script>

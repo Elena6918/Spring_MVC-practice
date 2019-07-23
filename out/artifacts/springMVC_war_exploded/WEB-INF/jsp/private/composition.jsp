@@ -10,8 +10,6 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-    request.setAttribute("basePath", basePath);
 %>
 <html>
 <link href="${pageContext.request.contextPath}/resources/css/composition.css" rel="stylesheet">
@@ -24,26 +22,25 @@
 </c:if>
 <div class="row">
     <div class="col left">
-        <form action="/save" method="post">
+        <form action="/private/composition/doSave" method="post">
             Title: <input type="text" name="title" id="title-box">
             <hr>
             <textarea rows="30" cols="100" name="content" placeholder="write something here..."></textarea>
-            <br>
+            <hr>
             <input type="submit" id="post-btn" value="save"/>
             <input type="hidden" value="${imagesPath}" name="imagePath"/>
         </form>
-        <form action="/worklist" method="post">
+        <form action="/private/worklist" method="post">
             <input type="submit" value="View Worklist">
         </form>
     </div>
-
     <div class="col right">
         <h2>Image</h2>
         Here is the image preview:
         <div id="image-box">
-            <img src="${basePath}${imagesPath}" id="previewImage"/>
+            <img src="<%=path%>${imagesPath}" id="previewImage"/>
         </div>
-        <form action="/upload" method="post" enctype="multipart/form-data">
+        <form action="/private/composition/doUpload" method="post" enctype="multipart/form-data">
             <input type="file" name="picture">
             <input type="submit" value="upload">
         </form>
@@ -51,7 +48,6 @@
 </div>
 </body>
 </html>
-
 <script>
     $("img").on("error", function() {
         $(this).hide();

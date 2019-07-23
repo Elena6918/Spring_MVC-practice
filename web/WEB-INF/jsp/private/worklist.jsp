@@ -9,12 +9,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-    request.setAttribute("basePath", basePath);
 %>
 <html>
 <link href="${pageContext.request.contextPath}/resources/css/worklist.css" rel="stylesheet">
-
 <head>
     <title>Worklist</title>
 </head>
@@ -23,7 +20,7 @@ There is the list:
 <div class="grid-container">
     <c:forEach items="${workList}" var="data">
         <div>
-            <a href=${basePath}work?workId=${data.workId}>
+            <a href=<%=path%>/private/work?workId=${data.workId}>
                 ${data.workName}
             <br>
                 ${data.creationTime}

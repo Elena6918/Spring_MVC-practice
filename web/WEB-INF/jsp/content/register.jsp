@@ -13,7 +13,7 @@
     <title>Register Page</title>
 </head>
 <body>
-<form action="<c:url value="/registering"/>" method="post">
+<form action="<c:url value="/content/registering"/>" method="post">
     <div id="login-box">
         <c:if test="${not empty error}">
             <div class="error">${error}</div>
