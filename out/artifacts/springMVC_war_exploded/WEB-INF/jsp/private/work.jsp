@@ -16,11 +16,25 @@
     <title>Work Display</title>
 </head>
 <body>
+<ul>
+    <li><a href="/private/main">Main</a></li>
+    <li><a href="/private/composition">Composition</a></li>
+    <li><a href="/private/worklist">Work List</a></li>
+    <li><a href="/content/login">Log Out</a></li>
+</ul>
 <div class="row">
     <div class="col left">
         <h3>${workTitle}</h3>
         <hr>
         ${workContent}
+        <div id="delete">
+            <hr>
+            <form action="/private/work/doDelete" method="post">
+                <input type="hidden" name="workId" value="${workId}"/>
+                <input type="submit" value="delete"/>
+            </form>
+        </div>
+
     </div>
     <div class="col right">
         <div id="image-box">

@@ -47,7 +47,7 @@ public class UserWork {
         this.imagePath = imagePath;
     }
 
-    public static UserWork toObject(Map<String, Object> map) {
+    private static UserWork toObject(Map<String, Object> map) {
         UserWork userWork = new UserWork();
         userWork.setWorkName((String)map.get("work_title"));
         userWork.setWorkContent((String)map.get("work_content"));

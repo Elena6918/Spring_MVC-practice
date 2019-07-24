@@ -47,12 +47,17 @@ public class UserServiceImpl implements UserService {
         userDao.insert(user);
     }
 
+
     public UserWork findWorkById(int workId){
         return userWorkDao.findWorkByWorkId(workId);
     }
 
     public void saveUserWork(UserWork userWork){
         userWorkDao.insert(userWork);
+    }
+
+    public void deleteUserWork(int workId){
+        userWorkDao.delete(workId);
     }
 
     public List<UserWork> workList(){

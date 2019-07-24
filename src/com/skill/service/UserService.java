@@ -19,5 +19,7 @@ public interface UserService {
 
     void saveUserWork(UserWork userWork);
 
+    void deleteUserWork(int workId);
+
     List<UserWork> workList();
 }

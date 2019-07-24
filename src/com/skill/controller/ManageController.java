@@ -81,6 +81,7 @@ public class ManageController {
     public ModelAndView work(@RequestParam("workId") int workId) {
         ModelAndView mav = new ModelAndView("private/work");
         UserWork currentWork = userService.findWorkById(workId);
+        mav.addObject("workId", currentWork.getWorkId());
         mav.addObject("workTitle", currentWork.getWorkName());
         mav.addObject("workContent", currentWork.getWorkContent());
         mav.addObject("time", currentWork.getCreationTime());
@@ -88,4 +89,9 @@ public class ManageController {
         return mav;
     }
 
+    @RequestMapping("/private/work/doDelete")
+    public String deleteWork(int workId){
+        userService.deleteUserWork(workId);
+        return "redirect: /private/worklist";
+    }
 }

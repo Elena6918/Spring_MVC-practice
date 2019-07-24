@@ -16,6 +16,12 @@
     <title>Worklist</title>
 </head>
 <body>
+<ul>
+    <li><a href="/private/main">Main</a></li>
+    <li><a href="/private/composition">Composition</a></li>
+    <li><a href="/content/login">Log Out</a></li>
+</ul>
+<br>
 There is the list:
 <div class="grid-container">
     <c:forEach items="${workList}" var="data">
@@ -31,3 +37,9 @@ There is the list:
 </div>
 </body>
 </html>
+
+<script>
+    $(function(){
+        $("#nav-placeholder").load("navbar.jsp");
+    });
+</script>

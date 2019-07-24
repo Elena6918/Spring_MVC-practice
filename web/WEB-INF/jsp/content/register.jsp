@@ -30,10 +30,6 @@
         <input id="submit" type="submit" value="register">
         <br>
         <a href="/login">back to login page</a>
-
-        <%--            <form action="<c:url value="/login"/>" method="post">--%>
-        <%--                <input type="submit" value="back to login"/>--%>
-        <%--            </form>--%>
     </div>
 </form>
 

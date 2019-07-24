@@ -24,6 +24,9 @@ public class UserWorkDao {
                 userWork.getWorkName(), userWork.getWorkContent(), userWork.getCreationTime(), userWork.getImagePath());
     }
 
+    public void delete(int workId){
+        this.jdbcTemplate.update("DELETE FROM Spring_userWork WHERE work_id = ?", workId);
+    }
     public UserWork findWorkByWorkId(final int workId) {
         String sqlStr = " SELECT work_title, work_content, create_time, image_path " + " FROM Spring_userWork WHERE work_id =? ";
         final UserWork userWork = new UserWork();
