@@ -20,7 +20,7 @@ public class ManageController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/private/main")
+    @RequestMapping("private/main")
     public String main(){
         return "private/main";
     }

@@ -20,7 +20,7 @@
     <li><a href="/private/main">Main</a></li>
     <li><a href="/private/composition">Composition</a></li>
     <li><a href="/private/worklist">Work List</a></li>
-    <li><a href="/content/login">Log Out</a></li>
+    <li><a href="/login">Log Out</a></li>
 </ul>
 <div class="row">
     <div class="col left">

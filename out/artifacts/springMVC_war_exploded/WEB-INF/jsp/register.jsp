@@ -13,7 +13,7 @@
     <title>Register Page</title>
 </head>
 <body>
-<form action="<c:url value="/content/registering"/>" method="post">
+<form action="<c:url value="/registering"/>" method="post">
     <div id="login-box">
         <c:if test="${not empty error}">
             <div class="error">${error}</div>
@@ -30,10 +30,6 @@
         <input id="submit" type="submit" value="register">
         <br>
         <a href="/login">back to login page</a>
-
-        <%--            <form action="<c:url value="/login"/>" method="post">--%>
-        <%--                <input type="submit" value="back to login"/>--%>
-        <%--            </form>--%>
     </div>
 </form>
 

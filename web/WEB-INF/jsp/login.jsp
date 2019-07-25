@@ -17,7 +17,7 @@
     <c:if test="${not empty error}">
         <div class="error">${error}</div>
     </c:if>
-    <form action="<c:url value="/content/loginCheck"/>" method="post">
+    <form action="<c:url value="/loginCheck"/>" method="post">
         username:
         <input type="text" name="userName">
         <br>
@@ -27,7 +27,7 @@
         <input type="submit" value="submit"/>
         <input type="reset" value="reset"/>
     </form>
-    <form action="<c:url value="/content/register"/>" method="post">
+    <form action="<c:url value="/register"/>" method="post">
         Not registered user? click here:
         <input type="submit" value="register"/>
     </form>

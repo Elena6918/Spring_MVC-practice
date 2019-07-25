@@ -19,7 +19,7 @@
 <ul>
     <li><a href="/private/main">Main</a></li>
     <li><a href="/private/composition">Composition</a></li>
-    <li><a href="/content/login">Log Out</a></li>
+    <li><a href="/login">Log Out</a></li>
 </ul>
 <br>
 There is the list:

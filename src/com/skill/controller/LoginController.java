@@ -16,41 +16,41 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/content/login")
+    @RequestMapping(value = "/login")
     public String loginPage() {
-        return "content/login";
+        return "login";
     }
 
-    @RequestMapping(value = "/content/loginCheck")
+    @RequestMapping(value = "/loginCheck")
     public ModelAndView loginCheck(HttpServletRequest request, LoginCommand loginCommand) {
         boolean isValidUser = userService.hasMatchUser(loginCommand.getUserName(), loginCommand.getPassword());
         if (!isValidUser) {
-            return new ModelAndView("content/login", "error", "invalid username or password.");
+            return new ModelAndView("login", "error", "invalid username or password.");
         } else {
             User user = userService.findUserByUserName(loginCommand.getUserName());
             user.setLastIp(request.getLocalAddr());
             user.setLastVisit(new Date());
             userService.loginSuccess(user);
             request.getSession().setAttribute("user", user);
-            return new ModelAndView("private/main");
+            return new ModelAndView("redirect: private/main");
         }
     }
 
-    @RequestMapping(value = "/content/register")
+    @RequestMapping(value = "/register")
     public String register() {
-        return "content/register";
+        return "register";
     }
 
-    @RequestMapping(value = "/content/registering")
+    @RequestMapping(value = "/registering")
     public ModelAndView registering(HttpServletRequest request, LoginCommand loginCommand) {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
         if (StringUtils.isEmpty(username)) {
-            return new ModelAndView("content/register", "error", "Username cannot be null.");
+            return new ModelAndView("register", "error", "Username cannot be null.");
         }
         if (StringUtils.isEmpty(password)) {
-            return new ModelAndView("content/register", "error", "Password cannot be null.");
+            return new ModelAndView("register", "error", "Password cannot be null.");
         }
 
 //      test name repetition
@@ -61,7 +61,7 @@ public class LoginController {
             user = null;
         }
         if (user.getUserName().equals(username)) {
-            return new ModelAndView("content/register", "error", "The username is registered.");
+            return new ModelAndView("register", "error", "This username is already registered.");
         }
 
         User newUser = new User();
@@ -69,17 +69,18 @@ public class LoginController {
         newUser.setPassword(password);
         loginCommand.setUserName(username);
         loginCommand.setPassword(password);
+        System.out.println("here");
         try {
             userService.insert(newUser);
-            return new ModelAndView("content/register", "info", "registration success");
+            return new ModelAndView("register", "info", "registration success");
         } catch (Exception e) {
-            return new ModelAndView("content/register", "error", e.getMessage());
+            return new ModelAndView("register", "error", e.getMessage());
         }
     }
 
     @RequestMapping(value = "/logout")
     public String logout(HttpServletRequest request) {
         request.getSession().invalidate();
-        return "content/login";
+        return "login";
     }
 }

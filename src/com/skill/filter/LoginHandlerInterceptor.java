@@ -25,16 +25,14 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
                              Object handler) throws Exception {
         String requestURI = request.getRequestURI();
+        //if url includes keyword private
         if(requestURI.indexOf("private")>0){
-            //说明处在private的页面
             HttpSession session = request.getSession();
             Object user = session.getAttribute("user");
-            if(user!=null){
-                //登陆成功的用户
+            if(user!=null){ //user already logged in
                 return true;
             }else{
-                //没有登陆，转向登陆界面
-                response.sendRedirect(request.getContextPath()+"/content/login");
+                response.sendRedirect(request.getContextPath()+"/login");
                 return false;
             }
         }else{
