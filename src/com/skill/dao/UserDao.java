@@ -47,7 +47,7 @@ public class UserDao {
                 user.getUserName(), user.getPassword());
     }
 
-    public void delete(long id) {
+    public void delete(int id) {
         this.jdbcTemplate.update("DELETE FROM Spring_user WHERE id=?", id);
     }
 }

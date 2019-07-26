@@ -57,11 +57,11 @@ public class LoginController {
         User user;
         try {
             user = userService.findUserByUserName(username);
+            if (user.getUserName().equals(username)) {
+                return new ModelAndView("register", "error", "This username is already registered.");
+            }
         } catch (Exception e) {
             user = null;
-        }
-        if (user.getUserName().equals(username)) {
-            return new ModelAndView("register", "error", "This username is already registered.");
         }
 
         User newUser = new User();
@@ -69,7 +69,6 @@ public class LoginController {
         newUser.setPassword(password);
         loginCommand.setUserName(username);
         loginCommand.setPassword(password);
-        System.out.println("here");
         try {
             userService.insert(newUser);
             return new ModelAndView("register", "info", "registration success");
