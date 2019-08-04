@@ -2,6 +2,7 @@ package com.skill.controller;
 
 import com.skill.domain.UserWork;
 import com.skill.service.UserService;
+import com.skill.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -52,12 +53,14 @@ public class ManageController {
     }
 
     @RequestMapping("/private/composition/doSave")
-    public ModelAndView save(String title, String content, String imagePath){
+    public ModelAndView save(String title, String content, String imagePath, HttpServletRequest request){
         UserWork newUserWork = new UserWork();
         newUserWork.setWorkName(title);
         newUserWork.setWorkContent(content);
         newUserWork.setCreationTime(new Date());
         newUserWork.setImagePath(imagePath);
+        User currentUser = (User) request.getSession().getAttribute("user");
+        newUserWork.setUserName(currentUser.getUserName());
         try{
             userService.saveUserWork(newUserWork);
             ModelAndView mav = new ModelAndView("private/composition");
@@ -70,9 +73,10 @@ public class ManageController {
     }
 
     @RequestMapping("/private/worklist")
-    public ModelAndView workList(){
+    public ModelAndView workList(HttpServletRequest request){
         ModelAndView mav = new ModelAndView("private/worklist");
-        List<UserWork> workList = userService.workList();
+        User currentUser = (User) request.getSession().getAttribute("user");
+        List<UserWork> workList = userService.workList(currentUser.getUserName());
         mav.addObject("workList", workList);
         return mav;
     }

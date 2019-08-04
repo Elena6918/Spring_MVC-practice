@@ -20,15 +20,17 @@ public class UserWorkDao {
     public UserWorkDao() { }
 
     public void insert(UserWork userWork) {
-        this.jdbcTemplate.update("INSERT INTO Spring_userWork (work_title, work_content, create_time, image_path) VALUES(?,?,?,?)",
-                userWork.getWorkName(), userWork.getWorkContent(), userWork.getCreationTime(), userWork.getImagePath());
+        this.jdbcTemplate.update("INSERT INTO Spring_userWork (work_title, work_content, create_time, " +
+                        "image_path, user_name) VALUES(?,?,?,?,?)",
+                userWork.getWorkName(), userWork.getWorkContent(), userWork.getCreationTime(),
+                userWork.getImagePath(), userWork.getUserName());
     }
 
     public void delete(int workId){
         this.jdbcTemplate.update("DELETE FROM Spring_userWork WHERE work_id = ?", workId);
     }
     public UserWork findWorkByWorkId(final int workId) {
-        String sqlStr = " SELECT work_title, work_content, create_time, image_path " + " FROM Spring_userWork WHERE work_id =? ";
+        String sqlStr = " SELECT work_title, work_content, create_time, image_path, user_name " + " FROM Spring_userWork WHERE work_id =? ";
         final UserWork userWork = new UserWork();
         jdbcTemplate.query(sqlStr, new Object[]{workId},
                 rs -> {
@@ -37,11 +39,12 @@ public class UserWorkDao {
                     userWork.setWorkId(workId);
                     userWork.setCreationTime(rs.getDate("create_time"));
                     userWork.setImagePath(rs.getString("image_path"));
+                    userWork.setUserName(rs.getString("user_name"));
                 });
         return userWork;
     }
-    public List<UserWork> workList(){
-        String sqlStr="SELECT * FROM Spring_userWork";
+    public List<UserWork> workList(String userName){
+        String sqlStr="SELECT * FROM Spring_userWork WHERE user_name = "+ "\"" + userName + "\"";
         List<Map<String, Object>> workList = jdbcTemplate.queryForList(sqlStr);
         return UserWork.toObject(workList);
     }

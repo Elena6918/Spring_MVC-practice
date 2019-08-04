@@ -60,7 +60,7 @@ public class UserServiceImpl implements UserService {
         userWorkDao.delete(workId);
     }
 
-    public List<UserWork> workList(){
-        return userWorkDao.workList();
+    public List<UserWork> workList(String userName){
+        return userWorkDao.workList(userName);
     }
 }

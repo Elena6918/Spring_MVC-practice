@@ -10,6 +10,7 @@ public class UserWork {
     private Date creationTime;
     private String workName;
     private String imagePath;
+    private String userName;
 
     public UserWork(){}
 
@@ -47,12 +48,20 @@ public class UserWork {
         this.imagePath = imagePath;
     }
 
+    public String getUserName(){
+        return userName;
+    }
+
+    public void setUserName(String userName){
+        this.userName = userName;
+    }
     private static UserWork toObject(Map<String, Object> map) {
         UserWork userWork = new UserWork();
         userWork.setWorkName((String)map.get("work_title"));
         userWork.setWorkContent((String)map.get("work_content"));
         userWork.setCreationTime((Date)map.get("create_time"));
         userWork.setWorkId((Integer)map.get("work_id"));
+        userWork.setUserName((String)map.get("user_name"));
         return userWork;
     }
 

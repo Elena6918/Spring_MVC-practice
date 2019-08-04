@@ -22,6 +22,7 @@
     <li><a href="/login">Log Out</a></li>
 </ul>
 <br>
+
 There is the list:
 <div class="grid-container">
     <c:forEach items="${workList}" var="data">

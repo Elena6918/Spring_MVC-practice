@@ -21,5 +21,5 @@ public interface UserService {
 
     void deleteUserWork(int workId);
 
-    List<UserWork> workList();
+    List<UserWork> workList(String userName);
 }
